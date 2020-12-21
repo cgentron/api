@@ -25,7 +25,7 @@ type ResolverHandler interface {
 var Symbols = map[string]map[string]reflect.Value{}
 
 func init() {
-	Symbols["github.com/cgentron/api/iface"] = map[string]reflect.Value{
+	Symbols["github.com/cgentron/proto/iface"] = map[string]reflect.Value{
 		"ResolverHandler":  reflect.ValueOf((*ResolverHandler)(nil)),
 		"_ResolverHandler": reflect.ValueOf((*_iface_resolver_Handler)(nil)),
 	}

@@ -2,10 +2,10 @@ syntax = "proto3";
 
 package cgentron.api;
 
-import "resolver.proto";
+import "cgentron/api/resolver.proto";
 
 option cc_enable_arenas = true;
-option go_package = "github.com/katallaxie/protoc-gen-cloud-proxy/api;api";
+option go_package = "proto";
 
 message Fields {
   string selector = 1;
