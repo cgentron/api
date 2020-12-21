@@ -1,4 +1,4 @@
-package main
+package api
 
 //go:generate rm -rf gen proto
 //go:generate mkdir -p gen

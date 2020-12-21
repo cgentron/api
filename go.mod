@@ -1,4 +1,4 @@
-module github.com/cgentron/proto
+module github.com/cgentron/api
 
 go 1.15
 
