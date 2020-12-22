@@ -6,7 +6,7 @@ import "cgentron/api/methods.proto";
 import "cgentron/api/fields.proto";
 import "google/protobuf/descriptor.proto";
 
-option go_package = "proto";
+option go_package = "github.com/cgentron/proto;proto";
 
 extend google.protobuf.MethodOptions {
   Methods methods = 12345678;

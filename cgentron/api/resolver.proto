@@ -3,7 +3,7 @@ syntax = "proto3";
 package cgentron.api;
 
 option cc_enable_arenas = true;
-option go_package = "proto";
+option go_package = "github.com/cgentron/proto;proto";
 
 message ResolverRule {
   string name = 1;
