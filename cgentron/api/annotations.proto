@@ -4,12 +4,17 @@ package cgentron.api;
 
 import "cgentron/api/methods.proto";
 import "cgentron/api/fields.proto";
+import "cgentron/api/messages.proto";
 import "google/protobuf/descriptor.proto";
 
 option go_package = "github.com/cgentron/api/proto;proto";
 
 extend google.protobuf.MethodOptions {
   Methods methods = 12345678;
+}
+
+extend google.protobuf.MessageOptions {
+  Messages messages = 12345678;
 }
 
 extend google.protobuf.FieldOptions {
