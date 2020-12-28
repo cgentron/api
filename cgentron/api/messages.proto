@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package cgentron.api;
+
+import "cgentron/api/resolver.proto";
+
+option cc_enable_arenas = true;
+option go_package = "github.com/cgentron/api/proto;proto";
+
+message Messages {
+  string selector = 1;
+
+  oneof pattern {
+    ResolverRule resolver   = 10;
+  }
+}
