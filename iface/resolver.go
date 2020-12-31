@@ -16,9 +16,11 @@ type Manifest struct {
 // Constructor ...
 type Constructor func() (ResolverHandler, error)
 
-// ResolverHandler ...
+// ResolverHandler is implementing the resolution of a input message
+// to an output messsage.
 type ResolverHandler interface {
-	Resolve(context.Context, []byte) ([]byte, error)
+	// Resolve is resolving an input message to an output message.
+	Resolve(context.Context, interface{}, interface{}) error
 }
 
 // Symbols variable stores the map of stdlib symbols per package.
@@ -33,9 +35,9 @@ func init() {
 
 // _iface_resolver_Handler is an interface wrapper for Handler type
 type _iface_resolver_Handler struct {
-	WResolve func(a0 context.Context, a1 []byte) ([]byte, error)
+	WResolve func(a0 context.Context, a1 interface{}) (interface{}, error)
 }
 
-func (W _iface_resolver_Handler) Resolve(a0 context.Context, a1 []byte) ([]byte, error) {
+func (W _iface_resolver_Handler) Resolve(a0 context.Context, a1 interface{}) (interface{}, error) {
 	return W.WResolve(a0, a1)
 }
